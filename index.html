@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}</style>
+<title>Oltinuy.uz</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&family=Spinnaker&family=Barlow:wght@300;400&display=swap">
+<style>
+/* Layout: 980px centred column (Wix-style), full-width teal title bands, grey rounded panels. Single light look, matching the sample. */
+:root{
+  --teal:#026b8b; --teal-2:#0291b9; --teal-soft:#a9d8e6; --ink:#1c2d36;
+  --panel:#f2f2f2; --white:#ffffff; --black:#000000; --tab-on:#d41317;
+  --poppins:"Poppins",Arial,sans-serif; --spin:"Spinnaker","Trebuchet MS",sans-serif; --din:"Barlow","Arial Narrow",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--white);color:var(--black);font-family:var(--poppins);font-size:16px;line-height:1.6}
+a{color:inherit}
+.col{max-width:980px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a:focus-visible,button:focus-visible{outline:3px solid var(--teal-2);outline-offset:2px}
+
+/* Header */
+.head{display:flex;align-items:center;gap:14px 18px;padding-block:14px;flex-wrap:wrap;max-width:1260px}
+.head .logo{order:0}.head .menu{order:1}.head .social{order:2}.head .phone{order:3}
+@media (max-width:1180px){.head .menu{order:4;flex-basis:100%}.head .social{margin-left:auto}}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-family:var(--poppins);font-weight:600;font-size:1.25rem;color:var(--teal);white-space:nowrap}
+.menu{flex:1 1 auto;min-width:0;overflow-x:auto}
+.menu ul{display:flex;list-style:none;margin:0;padding:0;border-radius:5px;box-shadow:0 1px 4px rgba(0,0,0,.45);width:max-content}
+.menu li+li a{border-left:1px solid #b9b9b9}
+.menu a{display:block;padding:6px 20px;font-family:var(--din);font-weight:300;font-size:15px;text-decoration:none;color:var(--black);background:linear-gradient(#ffffff,#e9e9e9);white-space:nowrap}
+.menu li:first-child a{border-radius:5px 0 0 5px}
+.menu li:last-child a{border-radius:0 5px 5px 0}
+.menu a:hover{color:var(--teal-2)}
+.menu a.on{background:linear-gradient(#e2393d,var(--tab-on));color:#fff}
+.social{display:flex;gap:12px}
+.social a{display:grid;place-items:center;color:var(--black)}
+.phone{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:26px;white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* Hero */
+.hero{position:relative;padding-bottom:40px}
+.hero-img{height:360px;border-bottom:9px solid var(--teal-2);background:
+  repeating-linear-gradient(100deg,rgba(255,255,255,.0) 0 34px,rgba(230,236,245,.75) 34px 40px,rgba(255,255,255,0) 40px 58px),
+  linear-gradient(90deg,#20262f 0%,#3a4656 40%,#7b8794 70%,#2d3640 100%);
+  display:flex;align-items:flex-start;justify-content:flex-end}
+.img-note{margin:12px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;padding:3px 8px;border-radius:3px}
+.hero-card{position:relative;margin:-140px auto 0;max-width:500px;background:var(--panel);border-radius:6px;padding:34px 30px 30px}
+.hero-card h1{font-family:var(--poppins);font-weight:600;font-size:clamp(2.1rem,6vw,3.1rem);line-height:1.05;color:var(--teal);margin:0 0 26px}
+.with-line{display:grid;grid-template-columns:66px minmax(0,1fr);gap:26px;align-items:start}
+.with-line::before{content:"";height:2px;background:var(--teal-2);margin-top:12px}
+.hero-card ul{margin:0;padding-left:1.1em;font-size:14px;color:var(--ink);line-height:1.75}
+.btns{display:flex;justify-content:flex-end;gap:3px;margin-top:-10px;margin-right:6px;position:relative}
+.plus{width:31px;height:31px;display:grid;place-items:center;background:var(--teal);color:#fff;border-radius:4px 0 0 4px;font-family:Arial,sans-serif;font-size:20px;text-decoration:none}
+.btn{height:31px;display:inline-flex;align-items:center;padding:0 22px;background:var(--teal-2);color:#fff;border-radius:0 4px 4px 0;font-family:Arial,Helvetica,sans-serif;font-weight:300;font-size:15px;text-decoration:none}
+.up{position:absolute;right:max(16px,calc(50% - 470px));bottom:84px;color:var(--teal-2)}
+
+/* Title bands */
+.band{background:var(--teal);border-bottom:9px solid var(--teal-2);margin-top:60px}
+.band h2{margin:0;color:#fff;font-family:var(--poppins);font-weight:600;font-size:clamp(2rem,6vw,3.6rem);line-height:1.15;padding-block:8px 6px}
+
+/* Service cards */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 70px;padding-block:24px 10px}
+.card{position:relative;background:var(--panel);border-radius:8px;padding:18px 18px 18px 20px;box-shadow:7px 7px 0 -1px #fff,8px 8px 0 0 #e3e3e3}
+.card h3{font-family:var(--spin);font-weight:400;font-size:24px;line-height:1.2;color:var(--teal);margin:0 0 12px;max-width:62%}
+.card-body{display:grid;grid-template-columns:minmax(0,1fr) 104px;gap:8px;align-items:end}
+.card ul{margin:0;padding-left:1.1em;font-size:13.5px;line-height:1.6;color:var(--black)}
+.thumb{height:100px;border-radius:2px;display:grid;place-items:center;color:var(--teal);background:linear-gradient(135deg,#dfe6ea,#c3ced5)}
+.more{display:inline-block;margin-top:18px;background:var(--teal-soft);color:var(--black);border-radius:6px;padding:4px 9px;font-family:Arial,Helvetica,sans-serif;font-size:14px;text-decoration:none}
+
+/* Service area */
+.area{background:var(--panel);border-radius:6px;padding:18px 20px;margin-top:14px;max-width:610px}
+.area ul{columns:2;column-gap:40px;margin:0;padding-left:1.1em;font-size:14px;line-height:1.75}
+
+/* CTA */
+.cta{position:relative;background:var(--panel);border-radius:6px;padding:40px 30px 52px;margin-top:70px;max-width:620px}
+.cta h2{font-family:var(--poppins);font-weight:600;font-size:clamp(1.8rem,5vw,2.6rem);color:var(--teal);margin:0 0 18px 60px;line-height:1.15}
+.cta p{margin:0;font-size:13.5px;max-width:320px}
+.cta .btns{position:absolute;right:20px;bottom:-16px;margin:0}
+
+/* Footer */
+footer{background:var(--teal);color:#fff;margin-top:110px}
+footer .col{padding-block:30px 14px}
+.contacts{list-style:none;margin:0 auto;padding:0;width:max-content;max-width:100%;display:grid;gap:22px}
+.contacts b{display:list-item;list-style:disc inside;font-weight:400;font-size:15px}
+.contacts span{display:block;font-weight:200;font-size:15px;letter-spacing:.04em;overflow-wrap:anywhere}
+.copy{text-align:center;font-size:11px;letter-spacing:.08em;margin-top:40px;font-weight:300}
+
+@media (max-width:760px){
+  .phone{font-size:20px}
+  .hero-img{height:240px}
+  .hero-card{margin-top:-80px}
+  .cards{grid-template-columns:1fr}
+  .up{display:none}
+  .cta h2{margin-left:0}
+}
+@media (max-width:420px){
+  .card h3{max-width:none}
+  .card-body{grid-template-columns:1fr}
+  .area ul{columns:1}
+  .with-line{grid-template-columns:1fr;gap:10px}
+  .with-line::before{width:66px}
+}
+</style>
+</head>
+<body>
+
+<header class="col head" id="bosh">
+  <a class="logo" href="#bosh" aria-label="Oltinuy.uz bosh sahifa">
+    <svg width="30" height="30" viewBox="0 0 34 34" aria-hidden="true"><path d="M4 16 17 5l13 11v13H4z" fill="none" stroke="#026b8b" stroke-width="2.6" stroke-linejoin="round"/><rect x="13" y="19" width="8" height="10" fill="#0291b9"/></svg>
+    Oltinuy.uz
+  </a>
+  <nav class="menu" aria-label="Asosiy menyu">
+    <ul>
+      <li><a class="on" href="#bosh">Bosh sahifa</a></li>
+      <li><a href="#buyurtma">Bizni yollang</a></li>
+      <li><a href="#xizmatlar">Oylik xizmat ko'rsatish</a></li>
+      <li><a href="#xizmatlar">Xizmatlarimiz</a></li>
+      <li><a href="#aloqa">Ijtimoiy tarmoqlar</a></li>
+      <li><a href="#xizmatlar">Galereya</a></li>
+      <li><a href="#xizmatlar">Blog</a></li>
+    </ul>
+  </nav>
+  <div class="social" aria-label="Ijtimoiy tarmoqlar">
+    <a href="#aloqa" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15V9l5.8 3Z"/></svg></a>
+    <a href="#aloqa" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
+    <a href="#aloqa" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6Z"/></svg></a>
+    <a href="#aloqa" aria-label="Telegram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.7.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2l-11 6.9-4.7-1.5c-1-.3-1-1 .2-1.5L20.5 3c.9-.3 1.6.2 1.4 1.3Z"/></svg></a>
+  </div>
+  <div class="phone">+998 97 312 07 31</div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="hero-img" role="img" aria-label="Bosh rasm uchun joy: Oltinuy ish rasmini qo'ying"><span class="img-note">Bu yerga Oltinuy'ning o'z rasmi qo'yiladi</span></div>
+    <div class="col">
+      <div class="hero-card">
+        <h1>Professional tarmoq xizmatlari</h1>
+        <div class="with-line">
+          <ul>
+            <li>IT maslahat</li>
+            <li>Biznes uchun IP‑telefoniya</li>
+            <li>Ovoz va ma'lumot kabellari</li>
+            <li>Kuzatuv kameralari</li>
+            <li>Tarmoq infratuzilmasi</li>
+            <li>Tarmoqni sozlash</li>
+            <li>Wi‑Fi kirish nuqtalarini sozlash</li>
+          </ul>
+        </div>
+      </div>
+      <div class="btns" style="max-width:500px;margin-inline:auto"><a class="plus" href="#xizmatlar" aria-hidden="true" tabindex="-1">+</a><a class="btn" href="#xizmatlar">Batafsil</a></div>
+    </div>
+    <a class="up" href="#bosh" aria-label="Yuqoriga"><svg width="22" height="16" viewBox="0 0 22 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m2 9 9-7 9 7M2 14l9-7 9 7"/></svg></a>
+  </div>
+
+  <div class="band" id="xizmatlar"><div class="col"><h2>Xizmatlarimiz</h2></div></div>
+  <div class="col">
+    <div class="cards">
+      <article class="card">
+        <h3>Wi‑Fi kirish nuqtalarini o'rnatish</h3>
+        <div class="card-body">
+          <ul><li>Kirish nuqtalarini o'rnatish</li><li>Kirish nuqtalari auditi</li><li>Masofadan boshqarish</li><li>Signal qamrovi xaritasi</li></ul>
+          <div class="thumb" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/></svg></div>
+        </div>
+        <a class="more" href="#buyurtma">+ Batafsil</a>
+      </article>
+      <article class="card">
+        <h3>Kuzatuv kameralarini o'rnatish</h3>
+        <div class="card-body">
+          <ul><li>4K kameralar o'rnatish</li><li>Masofadan ko'rish</li><li>Harakatni aniqlash</li><li>Biznes va uy‑joy uchun</li></ul>
+          <div class="thumb" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 7h12l4 3-4 3H3z"/><path d="M7 13v4H4"/></svg></div>
+        </div>
+        <a class="more" href="#buyurtma">+ Batafsil</a>
+      </article>
+      <article class="card">
+        <h3>Strukturaviy kabel tizimi</h3>
+        <div class="card-body">
+          <ul><li>Cat 5e kabel</li><li>Cat 6 kabel</li><li>Cat 6A kabel</li><li>Single‑mode va multi‑mode optik tola</li><li>Server shkafini o'rnatish</li><li>Shkafni tartibga keltirish va audit</li></ul>
+          <div class="thumb" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="6" rx="1"/><rect x="3" y="13" width="18" height="6" rx="1"/><path d="M7 6h.01M7 16h.01M11 6h6M11 16h6"/></svg></div>
+        </div>
+        <a class="more" href="#buyurtma">+ Batafsil</a>
+      </article>
+      <article class="card">
+        <h3>IP‑telefoniya o'rnatish</h3>
+        <div class="card-body">
+          <ul><li>Mini‑ATS (PBX) o'rnatish va sozlash</li><li>Raqam qo'shish, ko'chirish, o'zgartirish</li><li>Ovozli pochtani sozlash</li><li>Uzluksiz ishlaydigan telefon tizimi</li></ul>
+          <div class="thumb" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div>
+        </div>
+        <a class="more" href="#buyurtma">+ Batafsil</a>
+      </article>
+    </div>
+  </div>
+
+  <div class="band" id="hudud"><div class="col"><h2>Xizmat hududi</h2></div></div>
+  <div class="col">
+    <div class="area">
+      <ul>
+        <li>Toshkent shahri</li><li>Toshkent viloyati</li><li>Samarqand</li><li>Buxoro</li><li>Andijon</li><li>Farg'ona</li><li>Namangan</li>
+        <li>Qashqadaryo</li><li>Surxondaryo</li><li>Jizzax</li><li>Sirdaryo</li><li>Navoiy</li><li>Xorazm</li><li>Qoraqalpog'iston</li>
+      </ul>
+    </div>
+
+    <div class="cta" id="buyurtma">
+      <h2>Bizni yollamoqchimisiz?</h2>
+      <div class="with-line"><p>Bizni yollamoqchi bo'lsangiz, pastdagi tugmani bosing va bizga yozing yoki qo'ng'iroq qiling.</p></div>
+      <div class="btns"><a class="plus" href="#aloqa" aria-hidden="true" tabindex="-1">+</a><a class="btn" href="#aloqa">Bizni yollang</a></div>
+    </div>
+  </div>
+</main>
+
+<footer id="aloqa">
+  <div class="col">
+    <ul class="contacts">
+      <li><b>Manzil.</b><span>Toshkent, O'zbekiston</span></li>
+      <li><b>Tel.</b><span>+998 97 312 07 31</span></li>
+      <li><b>Email.</b><span>info@oltinuy.uz</span></li>
+      <li><b>Telegram.</b><span>@______</span></li>
+      <li><b>Instagram.</b><span>@______</span></li>
+    </ul>
+    <div class="copy">©2026 Oltinuy.uz</div>
+  </div>
+</footer>
+</body>
+</html>
