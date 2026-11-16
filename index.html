@@ -44,12 +44,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--teal-2);outline-off
 
 /* Hero */
 .hero{position:relative;padding-bottom:40px}
-.hero-img{height:360px;border-bottom:9px solid var(--teal-2);background:
-  repeating-linear-gradient(100deg,rgba(255,255,255,.0) 0 34px,rgba(230,236,245,.75) 34px 40px,rgba(255,255,255,0) 40px 58px),
-  linear-gradient(90deg,#20262f 0%,#3a4656 40%,#7b8794 70%,#2d3640 100%);
-  display:flex;align-items:flex-start;justify-content:flex-end}
+.hero-img{height:460px;border-bottom:9px solid var(--teal-2);background:#1c2d36 url(img/hero.jpg) center 75%/cover no-repeat}
 .img-note{margin:12px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;padding:3px 8px;border-radius:3px}
-.hero-card{position:relative;margin:-140px auto 0;max-width:500px;background:var(--panel);border-radius:6px;padding:34px 30px 30px}
+.hero-card{position:relative;margin:-50px auto 0;max-width:500px;background:var(--panel);border-radius:6px;padding:34px 30px 30px}
 .hero-card h1{font-family:var(--poppins);font-weight:600;font-size:clamp(2.1rem,6vw,3.1rem);line-height:1.05;color:var(--teal);margin:0 0 26px}
 .with-line{display:grid;grid-template-columns:66px minmax(0,1fr);gap:26px;align-items:start}
 .with-line::before{content:"";height:2px;background:var(--teal-2);margin-top:12px}
@@ -69,7 +66,13 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--teal-2);outline-off
 .card h3{font-family:var(--spin);font-weight:400;font-size:24px;line-height:1.2;color:var(--teal);margin:0 0 12px;max-width:62%}
 .card-body{display:grid;grid-template-columns:minmax(0,1fr) 104px;gap:8px;align-items:end}
 .card ul{margin:0;padding-left:1.1em;font-size:13.5px;line-height:1.6;color:var(--black)}
-.thumb{height:100px;border-radius:2px;display:grid;place-items:center;color:var(--teal);background:linear-gradient(135deg,#dfe6ea,#c3ced5)}
+.thumb{width:100%;height:110px;object-fit:cover;border-radius:2px;display:block}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding-block:24px 0;margin:0}
+.gallery figure{margin:0;background:var(--panel);border-radius:6px;overflow:hidden}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.gallery figcaption{font-size:13px;padding:8px 10px;color:var(--ink)}
+@media (max-width:760px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.gallery{grid-template-columns:1fr}}
 .more{display:inline-block;margin-top:18px;background:var(--teal-soft);color:var(--black);border-radius:6px;padding:4px 9px;font-family:Arial,Helvetica,sans-serif;font-size:14px;text-decoration:none}
 
 /* Service area */
@@ -121,7 +124,7 @@ footer .col{padding-block:30px 14px}
       <li><a href="#xizmatlar">Oylik xizmat ko'rsatish</a></li>
       <li><a href="#xizmatlar">Xizmatlarimiz</a></li>
       <li><a href="#aloqa">Ijtimoiy tarmoqlar</a></li>
-      <li><a href="#xizmatlar">Galereya</a></li>
+      <li><a href="#galereya">Galereya</a></li>
       <li><a href="#xizmatlar">Blog</a></li>
     </ul>
   </nav>
@@ -136,7 +139,7 @@ footer .col{padding-block:30px 14px}
 
 <main>
   <div class="hero">
-    <div class="hero-img" role="img" aria-label="Bosh rasm uchun joy: Oltinuy ish rasmini qo'ying"><span class="img-note">Bu yerga Oltinuy'ning o'z rasmi qo'yiladi</span></div>
+    <div class="hero-img" role="img" aria-label="Gold House Engineering jamoasi"></div>
     <div class="col">
       <div class="hero-card">
         <h1>Professional tarmoq xizmatlari</h1>
@@ -164,7 +167,7 @@ footer .col{padding-block:30px 14px}
         <h3>Wi‑Fi kirish nuqtalarini o'rnatish</h3>
         <div class="card-body">
           <ul><li>Kirish nuqtalarini o'rnatish</li><li>Kirish nuqtalari auditi</li><li>Masofadan boshqarish</li><li>Signal qamrovi xaritasi</li></ul>
-          <div class="thumb" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/></svg></div>
+          <img class="thumb" src="img/wifi.jpg" alt="Kompyuter sinfi tarmog'i" loading="lazy">
         </div>
         <a class="more" href="#buyurtma">+ Batafsil</a>
       </article>
@@ -172,7 +175,7 @@ footer .col{padding-block:30px 14px}
         <h3>Kuzatuv kameralarini o'rnatish</h3>
         <div class="card-body">
           <ul><li>4K kameralar o'rnatish</li><li>Masofadan ko'rish</li><li>Harakatni aniqlash</li><li>Biznes va uy‑joy uchun</li></ul>
-          <div class="thumb" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 7h12l4 3-4 3H3z"/><path d="M7 13v4H4"/></svg></div>
+          <img class="thumb" src="img/kamera.jpg" alt="Videokuzatuv nazorat xonasi" loading="lazy">
         </div>
         <a class="more" href="#buyurtma">+ Batafsil</a>
       </article>
@@ -180,7 +183,7 @@ footer .col{padding-block:30px 14px}
         <h3>Strukturaviy kabel tizimi</h3>
         <div class="card-body">
           <ul><li>Cat 5e kabel</li><li>Cat 6 kabel</li><li>Cat 6A kabel</li><li>Single‑mode va multi‑mode optik tola</li><li>Server shkafini o'rnatish</li><li>Shkafni tartibga keltirish va audit</li></ul>
-          <div class="thumb" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="6" rx="1"/><rect x="3" y="13" width="18" height="6" rx="1"/><path d="M7 6h.01M7 16h.01M11 6h6M11 16h6"/></svg></div>
+          <img class="thumb" src="img/kabel.jpg" alt="Server shkafi va kabel tizimi" loading="lazy">
         </div>
         <a class="more" href="#buyurtma">+ Batafsil</a>
       </article>
@@ -188,10 +191,25 @@ footer .col{padding-block:30px 14px}
         <h3>IP‑telefoniya o'rnatish</h3>
         <div class="card-body">
           <ul><li>Mini‑ATS (PBX) o'rnatish va sozlash</li><li>Raqam qo'shish, ko'chirish, o'zgartirish</li><li>Ovozli pochtani sozlash</li><li>Uzluksiz ishlaydigan telefon tizimi</li></ul>
-          <div class="thumb" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div>
+          <img class="thumb" src="img/telefon.jpg" alt="Favqulodda aloqa pulti" loading="lazy">
         </div>
         <a class="more" href="#buyurtma">+ Batafsil</a>
       </article>
+    </div>
+  </div>
+
+  <div class="band" id="galereya"><div class="col"><h2>Galereya</h2></div></div>
+  <div class="col">
+    <div class="gallery">
+      <figure><img src="img/g1.jpg" alt="Majlislar zalida ekran o'rnatish" loading="lazy"><figcaption>Majlislar zalida ekran o'rnatish</figcaption></figure>
+      <figure><img src="img/g2.jpg" alt="Qurilish obyektida kabel tortish" loading="lazy"><figcaption>Qurilish obyektida kabel tortish</figcaption></figure>
+      <figure><img src="img/g3.jpg" alt="Videokuzatuv serveri" loading="lazy"><figcaption>Videokuzatuv serveri</figcaption></figure>
+      <figure><img src="img/g4.jpg" alt="Favqulodda aloqa va xabarlash tizimi" loading="lazy"><figcaption>Favqulodda aloqa va xabarlash tizimi</figcaption></figure>
+      <figure><img src="img/g5.jpg" alt="Kompyuter sinfi" loading="lazy"><figcaption>Kompyuter sinfi</figcaption></figure>
+      <figure><img src="img/g6.jpg" alt="Server shkafi" loading="lazy"><figcaption>Server shkafi</figcaption></figure>
+      <figure><img src="img/g7.jpg" alt="Videokuzatuv nazorat xonasi" loading="lazy"><figcaption>Videokuzatuv nazorat xonasi</figcaption></figure>
+      <figure><img src="img/g8.jpg" alt="Shkafdagi kommutatsiya" loading="lazy"><figcaption>Shkafdagi kommutatsiya</figcaption></figure>
+      <figure><img src="img/g9.jpg" alt="Devor ichidan kabel o'tkazish" loading="lazy"><figcaption>Devor ichidan kabel o'tkazish</figcaption></figure>
     </div>
   </div>
 
