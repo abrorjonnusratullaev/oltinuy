@@ -75,6 +75,19 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--teal-2);outline-off
 @media (max-width:420px){.gallery{grid-template-columns:1fr}}
 .more{display:inline-block;margin-top:18px;background:var(--teal-soft);color:var(--black);border-radius:6px;padding:4px 9px;font-family:Arial,Helvetica,sans-serif;font-size:14px;text-decoration:none}
 
+/* About + license */
+.about{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:30px;align-items:start;padding-block:24px 0}
+.about p{margin:0 0 14px;font-size:14.5px;max-width:60ch}
+.lic{background:var(--panel);border-radius:8px;padding:18px 20px;margin-top:6px}
+.lic h3{font-family:var(--spin);font-weight:400;font-size:22px;color:var(--teal);margin:0 0 10px}
+.lic dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:6px 18px;margin:0;font-size:14px}
+.lic dt{color:var(--teal);font-weight:600}
+.lic dd{margin:0}
+.clients{columns:2;column-gap:30px;margin:0;padding-left:1.1em;font-size:14px;line-height:1.75}
+.scan{display:block;background:var(--panel);border-radius:8px;padding:10px;text-decoration:none;color:var(--ink);font-size:12.5px;text-align:center}
+.scan img{width:100%;height:auto;display:block;border-radius:3px;margin-bottom:8px;box-shadow:0 1px 4px rgba(0,0,0,.25)}
+@media (max-width:760px){.about{grid-template-columns:1fr}.scan{max-width:260px}.clients{columns:1}}
+
 /* Service area */
 .area{background:var(--panel);border-radius:6px;padding:18px 20px;margin-top:14px;max-width:610px}
 .area ul{columns:2;column-gap:40px;margin:0;padding-left:1.1em;font-size:14px;line-height:1.75}
@@ -121,7 +134,7 @@ footer .col{padding-block:30px 14px}
     <ul>
       <li><a class="on" href="#bosh">Bosh sahifa</a></li>
       <li><a href="#buyurtma">Bizni yollang</a></li>
-      <li><a href="#xizmatlar">Oylik xizmat ko'rsatish</a></li>
+      <li><a href="#biz-haqimizda">Biz haqimizda</a></li>
       <li><a href="#xizmatlar">Xizmatlarimiz</a></li>
       <li><a href="#aloqa">Ijtimoiy tarmoqlar</a></li>
       <li><a href="#galereya">Galereya</a></li>
@@ -198,6 +211,30 @@ footer .col{padding-block:30px 14px}
     </div>
   </div>
 
+  <div class="band" id="biz-haqimizda"><div class="col"><h2>Biz haqimizda</h2></div></div>
+  <div class="col">
+    <div class="about">
+      <div>
+        <p><b>"GOLD HOUSE ENGINEERING" MChJ</b> axborot texnologiyalari sohasida faoliyat yuritadi: IT loyihalarni ishlab chiqadi, ma'lumot uzatish tarmoqlari va uskunalarini loyihalaydi hamda o'rnatadi. Jamoamiz yuqori malakali mutaxassislardan iborat.</p>
+        <div class="lic">
+          <h3>Litsenziya</h3>
+          <dl>
+            <dt>Raqami</dt><dd>AA № 0006935 (Reyestr № 4439)</dd>
+            <dt>Berilgan sana</dt><dd>12.07.2019</dd>
+            <dt>Amal qilish muddati</dt><dd>Muddatsiz</dd>
+            <dt>Bergan organ</dt><dd>O'zbekiston Respublikasi Axborot texnologiyalari va kommunikatsiyalarini rivojlantirish vazirligi</dd>
+            <dt>Faoliyat turi</dt><dd>Ma'lumot uzatish tarmoqlarini loyihalash va qurish</dd>
+          </dl>
+        </div>
+        <p style="margin-top:22px"><b>Bizga ishonch bildirgan tashkilotlar:</b></p>
+        <ul class="clients">
+          <li>Davlat xizmatlari agentligi</li><li>Viloyat prokuraturasi</li><li>Qarshi davlat universiteti</li><li>"Avtoroom" MChJ</li><li>"A.S. Servis" MChJ</li><li>"LT Textile International" MChJ XK</li><li>Ko'p qavatli turar-joy majmualari</li>
+        </ul>
+      </div>
+      <a class="scan" href="img/litsenziya.jpg" target="_blank" rel="noopener"><img src="img/litsenziya.jpg" alt="Litsenziya AA № 0006935 nusxasi" width="900" height="1300" loading="lazy">Litsenziya nusxasi (kattalashtirish uchun bosing)</a>
+    </div>
+  </div>
+
   <div class="band" id="galereya"><div class="col"><h2>Galereya</h2></div></div>
   <div class="col">
     <div class="gallery">
@@ -217,8 +254,8 @@ footer .col{padding-block:30px 14px}
   <div class="col">
     <div class="area">
       <ul>
-        <li>Toshkent shahri</li><li>Toshkent viloyati</li><li>Samarqand</li><li>Buxoro</li><li>Andijon</li><li>Farg'ona</li><li>Namangan</li>
-        <li>Qashqadaryo</li><li>Surxondaryo</li><li>Jizzax</li><li>Sirdaryo</li><li>Navoiy</li><li>Xorazm</li><li>Qoraqalpog'iston</li>
+        <li><b>Qarshi shahri</b></li><li><b>Qashqadaryo viloyati</b></li><li>Surxondaryo</li><li>Toshkent shahri</li><li>Toshkent viloyati</li><li>Samarqand</li><li>Buxoro</li>
+        <li>Andijon</li><li>Farg'ona</li><li>Namangan</li><li>Jizzax</li><li>Sirdaryo</li><li>Navoiy</li><li>Xorazm</li><li>Qoraqalpog'iston</li>
       </ul>
     </div>
 
@@ -233,13 +270,13 @@ footer .col{padding-block:30px 14px}
 <footer id="aloqa">
   <div class="col">
     <ul class="contacts">
-      <li><b>Manzil.</b><span>Toshkent, O'zbekiston</span></li>
+      <li><b>Manzil.</b><span>Qashqadaryo viloyati, Qarshi shahri,<br>Mahallot MFY, Amir Temur ko'chasi, 74-uy</span></li>
       <li><b>Tel.</b><span>+998 97 312 07 31</span></li>
       <li><b>Email.</b><span>info@oltinuy.uz</span></li>
       <li><b>Telegram.</b><span>@______</span></li>
       <li><b>Instagram.</b><span>@______</span></li>
     </ul>
-    <div class="copy">©2026 Oltinuy.uz</div>
+    <div class="copy">©2026 "GOLD HOUSE ENGINEERING" MChJ · STIR 306423648 · Litsenziya AA № 0006935</div>
   </div>
 </footer>
 </body>
