@@ -80,6 +80,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--teal-2);outline-off
 .vid{position:relative;width:100%;background:#000}
 .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .vid.short{aspect-ratio:9/16;max-height:620px}
+.videos figure.tall{grid-row:span 2}
 .vid.wide16{aspect-ratio:16/9}
 @media (max-width:760px){.videos{grid-template-columns:1fr}.vid.short{max-width:340px;margin-inline:auto}}
 .map h2{font-family:var(--poppins);font-weight:600;font-size:clamp(1.6rem,4vw,2.2rem);color:var(--teal);margin:0 0 6px}
@@ -186,6 +187,7 @@ footer .col{padding-block:30px 14px}
             <li>Wi‑Fi kirish nuqtalarini sozlash</li>
             <li>Aqlli uy va turniket tizimlari</li>
             <li>Printerlarga texnik xizmat</li>
+            <li>O'quv kurslari va treninglar</li>
           </ul>
         </div>
       </div>
@@ -245,13 +247,21 @@ footer .col{padding-block:30px 14px}
         </div>
         <a class="more" href="#videolar">▶ Videoni ko'rish</a>
       </article>
-      <article class="card wide">
+      <article class="card">
         <h3>Printerlarga texnik xizmat ko'rsatish</h3>
         <div class="card-body">
-          <ul><li>Korporativ va ofis printerlariga rejali xizmat (HP, Xerox, Kyocera, Canon)</li><li>Tozalash, kalibrlash va sinov chop etish</li><li>Kartrij to'ldirish yoki almashtirish</li><li>Drayver va proshivkani yangilash, tarmoqqa ulash</li><li>Nosozlikda chiqib ta'mirlash va hisobot</li></ul>
+          <ul><li>Korporativ va ofis printerlari (HP, Xerox, Kyocera, Canon)</li><li>Tozalash, kalibrlash va sinov chop etish</li><li>Kartrij to'ldirish yoki almashtirish</li><li>Drayver va proshivkani yangilash, tarmoqqa ulash</li><li>Nosozlikda chiqib ta'mirlash va hisobot</li></ul>
           <div class="thumb thumb-ico" aria-hidden="true"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M6 9V3h12v6"/><rect x="2" y="9" width="20" height="8" rx="2"/><path d="M6 14h12v7H6z"/><path d="M18 12h.01"/></svg></div>
         </div>
         <a class="more" href="#buyurtma">+ Batafsil</a>
+      </article>
+      <article class="card">
+        <h3>O'quv kurslari va treninglar</h3>
+        <div class="card-body">
+          <ul><li>Tarmoq va kabel tizimlari bo'yicha amaliy darslar</li><li>Videokuzatuv va IP‑telefoniyani sozlash</li><li>Tashkilot xodimlari uchun treninglar</li><li>Video darslar</li></ul>
+          <div class="thumb thumb-ico" aria-hidden="true"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/><path d="M22 9v6"/></svg></div>
+        </div>
+        <a class="more" href="#videolar">▶ Videoni ko'rish</a>
       </article>
     </div>
   </div>
@@ -283,8 +293,9 @@ footer .col{padding-block:30px 14px}
   <div class="band" id="videolar"><div class="col"><h2>Videolar</h2></div></div>
   <div class="col">
     <div class="videos">
-      <figure><div class="vid short"><iframe title="Aqlli uy tizimi" src="https://www.youtube-nocookie.com/embed/jmHtKWtjvpY" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption>Aqlli uy tizimi. <a href="https://www.youtube.com/shorts/jmHtKWtjvpY" target="_blank" rel="noopener">YouTube'da ochish</a></figcaption></figure>
+      <figure class="tall"><div class="vid short"><iframe title="Aqlli uy tizimi" src="https://www.youtube-nocookie.com/embed/jmHtKWtjvpY" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption>Aqlli uy tizimi. <a href="https://www.youtube.com/shorts/jmHtKWtjvpY" target="_blank" rel="noopener">YouTube'da ochish</a></figcaption></figure>
       <figure><div class="vid wide16"><iframe title="Turniket tizimi" src="https://www.youtube-nocookie.com/embed/r2tdRJUoTiQ" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption>Turniket va kirishni nazorat qilish tizimi. <a href="https://www.youtube.com/watch?v=r2tdRJUoTiQ" target="_blank" rel="noopener">YouTube'da ochish</a></figcaption></figure>
+      <figure><div class="vid wide16"><iframe title="O'quv trening darsi" src="https://www.youtube-nocookie.com/embed/_tsO5rXMY-w" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption>O'quv trening darsimizdan. <a href="https://www.youtube.com/watch?v=_tsO5rXMY-w" target="_blank" rel="noopener">YouTube'da ochish</a></figcaption></figure>
     </div>
   </div>
 
