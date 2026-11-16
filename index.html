@@ -73,6 +73,15 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--teal-2);outline-off
 .card.wide ul{columns:2;column-gap:30px}
 @media (max-width:760px){.card.wide ul{columns:1}}
 .map{margin-top:70px}
+.videos{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:20px;padding-block:24px 0;align-items:start}
+.videos figure{margin:0;background:var(--panel);border-radius:8px;overflow:hidden}
+.videos figcaption{font-size:14px;padding:10px 12px}
+.videos figcaption a{color:var(--teal);font-weight:600}
+.vid{position:relative;width:100%;background:#000}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid.short{aspect-ratio:9/16;max-height:620px}
+.vid.wide16{aspect-ratio:16/9}
+@media (max-width:760px){.videos{grid-template-columns:1fr}.vid.short{max-width:340px;margin-inline:auto}}
 .map h2{font-family:var(--poppins);font-weight:600;font-size:clamp(1.6rem,4vw,2.2rem);color:var(--teal);margin:0 0 6px}
 .map p{margin:0 0 14px;font-size:14px}
 .map-frame{position:relative;border-radius:8px;overflow:hidden;background:var(--panel);aspect-ratio:16/7;min-height:260px;max-width:100%}
@@ -175,6 +184,7 @@ footer .col{padding-block:30px 14px}
             <li>Tarmoq infratuzilmasi</li>
             <li>Tarmoqni sozlash</li>
             <li>Wi‑Fi kirish nuqtalarini sozlash</li>
+            <li>Aqlli uy va turniket tizimlari</li>
             <li>Printerlarga texnik xizmat</li>
           </ul>
         </div>
@@ -219,6 +229,22 @@ footer .col{padding-block:30px 14px}
         </div>
         <a class="more" href="#buyurtma">+ Batafsil</a>
       </article>
+      <article class="card">
+        <h3>Aqlli uy (Smart Home) tizimlari</h3>
+        <div class="card-body">
+          <ul><li>Yoritish, parda va konditsionerni telefondan boshqarish</li><li>Ssenariylar va avtomatlashtirish</li><li>Datchiklar va xavfsizlik tizimi</li><li>Ovozli boshqaruv</li></ul>
+          <div class="thumb thumb-ico" aria-hidden="true"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M3 11 12 4l9 7v9H3z"/><path d="M9 15a4 4 0 0 1 6 0M7 12.5a7 7 0 0 1 10 0"/><circle cx="12" cy="17.5" r=".8" fill="currentColor"/></svg></div>
+        </div>
+        <a class="more" href="#videolar">▶ Videoni ko'rish</a>
+      </article>
+      <article class="card">
+        <h3>Turniket va kirishni nazorat qilish</h3>
+        <div class="card-body">
+          <ul><li>Turniketlar o'rnatish</li><li>Karta, yuz va barmoq izi orqali kirish</li><li>Xodimlar davomatini hisobga olish</li><li>Kameralar bilan integratsiya</li></ul>
+          <div class="thumb thumb-ico" aria-hidden="true"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="4" width="6" height="16" rx="1"/><path d="M9 9h12M9 12h9M9 15h12"/><circle cx="6" cy="8" r=".8" fill="currentColor"/></svg></div>
+        </div>
+        <a class="more" href="#videolar">▶ Videoni ko'rish</a>
+      </article>
       <article class="card wide">
         <h3>Printerlarga texnik xizmat ko'rsatish</h3>
         <div class="card-body">
@@ -251,6 +277,14 @@ footer .col{padding-block:30px 14px}
         </ul>
       </div>
       <a class="scan" href="img/litsenziya.jpg" target="_blank" rel="noopener"><img src="img/litsenziya.jpg" alt="Litsenziya AA № 0006935 nusxasi" width="900" height="1300" loading="lazy">Litsenziya nusxasi (kattalashtirish uchun bosing)</a>
+    </div>
+  </div>
+
+  <div class="band" id="videolar"><div class="col"><h2>Videolar</h2></div></div>
+  <div class="col">
+    <div class="videos">
+      <figure><div class="vid short"><iframe title="Aqlli uy tizimi" src="https://www.youtube-nocookie.com/embed/jmHtKWtjvpY" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption>Aqlli uy tizimi. <a href="https://www.youtube.com/shorts/jmHtKWtjvpY" target="_blank" rel="noopener">YouTube'da ochish</a></figcaption></figure>
+      <figure><div class="vid wide16"><iframe title="Turniket tizimi" src="https://www.youtube-nocookie.com/embed/r2tdRJUoTiQ" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption>Turniket va kirishni nazorat qilish tizimi. <a href="https://www.youtube.com/watch?v=r2tdRJUoTiQ" target="_blank" rel="noopener">YouTube'da ochish</a></figcaption></figure>
     </div>
   </div>
 
